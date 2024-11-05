@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             .build()
         val img: ImageView = findViewById(R.id.imageToLabel)
 // assets folder image file name with extension
-        val fileName = "ejemploasa.jpg"
+        val fileName = "colonn3001.jpeg"
 // get bitmap from assets folder
         val bitmap: Bitmap? = assetsToBitmap(fileName)
         bitmap?.apply {
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener {
             val options = CustomImageLabelerOptions.Builder(localModel)
                 .setConfidenceThreshold(0.3f)
-                .setMaxResultCount(4)
+                .setMaxResultCount(2)
                 .build()
             val labeler = ImageLabeling.getClient(options)
             val image = InputImage.fromBitmap(bitmap!!, 0)
